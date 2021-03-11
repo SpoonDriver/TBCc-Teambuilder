@@ -9,12 +9,12 @@ package dev.academy.tbc.entities;
 
 public enum Classes {
     DRUID,
-    ROUGE,
-    WARRIOR,
-    MAGE,
-    PRIEST,
     HUNTER,
-    WARLOCK,
+    MAGE,
     PALADIN,
-    SHAMAN
+    PRIEST,
+    ROUGE,
+    SHAMAN,
+    WARLOCK,
+    WARRIOR
 }

@@ -2,8 +2,8 @@ package dev.academy.tbc.entities;
 
 
 public enum Roles {
-    RANGED_DPS,
+    HEALER,
     MELEE_DPS,
-    TANK,
-    HEALER
+    RANGED_DPS,
+    TANK
 }

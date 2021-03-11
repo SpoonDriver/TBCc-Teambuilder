@@ -20,7 +20,7 @@ public class TeamcompService {
         teamcomp.setFaction(teamcompRequest.getFaction());
         teamcomp.setGroupLeader(teamcompRequest.getGroupLeader());
         teamcomp.setRegion(teamcompRequest.getRegion());
-        teamcomp.setServer(teamcompRequest.getServer());
+        teamcomp.setServerName(teamcompRequest.getServerName());
         teamcompRepository.save(teamcomp);
     }
 }

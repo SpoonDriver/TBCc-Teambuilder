@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
@@ -20,11 +21,15 @@ public class Teamcomp {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long teamcompId;
 
+    @NotNull(message = "Faction is needed")
     private Faction faction;
 
+    @NotNull(message = "Groupleader is needed")
     private String groupLeader;
 
-    private String region;
+    @NotNull(message = "Region is needed")
+    private Region region;
 
-    private String server;
+    @NotNull(message = "Servername is needed")
+    private String serverName;
 }
