@@ -19,7 +19,7 @@ public class PlayerController {
     private final PlayerService playerService;
 
     @PostMapping("/createPlayer")
-    public ResponseEntity<String> createPlater(@RequestBody PlayerRequest playerRequest) {
+    public ResponseEntity<String> createPlayer(@RequestBody PlayerRequest playerRequest) {
         playerService.save(playerRequest);
         return new ResponseEntity<>("Player added", HttpStatus.OK);
     }

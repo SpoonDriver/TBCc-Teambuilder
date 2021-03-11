@@ -22,5 +22,7 @@ public class Teamcomp {
 
     private Faction faction;
 
+    private String groupLeader;
+
 
 }
