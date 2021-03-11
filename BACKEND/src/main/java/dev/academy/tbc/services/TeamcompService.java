@@ -19,6 +19,8 @@ public class TeamcompService {
         Teamcomp teamcomp = new Teamcomp();
         teamcomp.setFaction(teamcompRequest.getFaction());
         teamcomp.setGroupLeader(teamcompRequest.getGroupLeader());
+        teamcomp.setRegion(teamcompRequest.getRegion());
+        teamcomp.setServer(teamcompRequest.getServer());
         teamcompRepository.save(teamcomp);
     }
 }

@@ -24,5 +24,7 @@ public class Teamcomp {
 
     private String groupLeader;
 
+    private String region;
 
+    private String server;
 }

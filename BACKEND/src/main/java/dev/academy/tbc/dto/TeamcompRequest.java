@@ -13,4 +13,6 @@ import lombok.NoArgsConstructor;
 public class TeamcompRequest {
     private Faction faction;
     private String groupLeader;
+    private String region;
+    private String server;
 }
