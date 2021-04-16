@@ -18,4 +18,5 @@ public class TeamCompResponse {
     private Faction faction;
     private Region region;
     private String server;
+    private String raidName;
 }

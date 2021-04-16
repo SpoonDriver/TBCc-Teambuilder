@@ -16,4 +16,5 @@ public class TeamcompRequest {
     private String groupLeader;
     private Region region;
     private String serverName;
+    private String raidName;
 }

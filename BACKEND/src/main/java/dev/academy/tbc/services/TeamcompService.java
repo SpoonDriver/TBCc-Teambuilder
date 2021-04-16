@@ -29,6 +29,7 @@ public class TeamcompService {
         teamcomp.setGroupLeader(teamcompRequest.getGroupLeader());
         teamcomp.setRegion(teamcompRequest.getRegion());
         teamcomp.setServerName(teamcompRequest.getServerName());
+        teamcomp.setRaidName(teamcompRequest.getRaidName());
         teamcompRepository.save(teamcomp);
     }
 
@@ -46,6 +47,7 @@ public class TeamcompService {
                 .region(teamcomp.getRegion())
                 .server(teamcomp.getServerName())
                 .teamcompId(teamcomp.getTeamcompId())
+                .raidName(teamcomp.getRaidName())
                 .build();
     }
 }

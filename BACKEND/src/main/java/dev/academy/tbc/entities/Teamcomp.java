@@ -27,6 +27,9 @@ public class Teamcomp {
     @NotNull(message = "Groupleader is needed")
     private String groupLeader;
 
+    @NotNull(message = "Groupleader is needed")
+    private String raidName;
+
     @NotNull(message = "Region is needed")
     private Region region;
 
