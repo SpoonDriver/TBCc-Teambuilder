@@ -1,5 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
+import './Home.css';
 
 class TeamComponent extends React.Component {
      constructor(props) {
@@ -35,7 +36,7 @@ class TeamComponent extends React.Component {
             return <div>Loading...</div>;
 
         return (
-            <div className="App">
+            <div className="container">
                 <ul>
                     {players.map(player => (
                         <li key={player.id}>

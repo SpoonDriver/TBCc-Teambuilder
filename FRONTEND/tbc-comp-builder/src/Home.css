@@ -1,0 +1,46 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    place-content: center;
+    text-align-last: justify;
+    font-size: 3em;
+}
+
+input {
+    font-size: 1em;
+}
+
+select{
+    font-size: 1em;
+}
+
+.btn {
+	background-color:#404140;
+	border-radius:28em;
+	border:1px solid #5c5f5d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:21px;
+	padding:13px 45px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #141413;
+
+    margin: 1em;
+}
+.btn:hover {
+	background-color:#383838;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+h2 {
+    font-size: 7em;
+}
+
+        

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Home.css';
 
 class MakeGroupComponent extends Component {
   constructor(props) {
@@ -18,13 +19,25 @@ class MakeGroupComponent extends Component {
 
   }
 
+  handleRegionChange = event => {
+    this.setState({
+      region: event.target.value
+    })
+  }
+
+  handleFactionChange = event => {
+    this.setState({
+      faction: event.target.value
+    })
+  }
+
   submitHandler = event => {
     console.log(this.state)
     event.preventDefault()
 
 
 
-   
+
     var requestOptions = {
       method: 'POST',
       headers: {
@@ -49,25 +62,40 @@ class MakeGroupComponent extends Component {
   render() {
     const { raidName, faction, groupLeader, serverName, region } = this.state
     return (
-      <form onSubmit={this.submitHandler}>
+      <div className="container">
+        <form onSubmit={this.submitHandler}>
 
-        <div>
-          <input type="text" name="raidName" value={raidName} onChange={this.changeHandler}></input>
-        </div>
-        <div>
-          <input type="text" name="faction" value={faction} onChange={this.changeHandler}></input>
-        </div>
-        <div>
-          <input type="text" name="groupLeader" value={groupLeader} onChange={this.changeHandler}></input>
-        </div>
-        <div>
-          <input type="text" name="serverName" value={serverName} onChange={this.changeHandler}></input>
-        </div>
-        <div>
-          <input type="text" name="region" value={region} onChange={this.changeHandler}></input>
-        </div>
-        <button type="submit">Sub</button>
-      </form>
+          <div>
+            <label>Raid: </label>
+            <input type="text" name="raidName" value={raidName} onChange={this.changeHandler}></input>
+          </div>
+          <div>
+            <label>Faction: </label>
+            <select value={faction} onChange={this.handleFactionChange}>
+              <option ></option>
+              <option value="ALLIANCE">Alliance</option>
+              <option value="HORDE">Horde</option>
+            </select>
+          </div>
+          <div>
+            <label>Groupleader: </label>
+            <input type="text" name="groupLeader" value={groupLeader} onChange={this.changeHandler}></input>
+          </div>
+          <div>
+            <label>Server: </label>
+            <input type="text" name="serverName" value={serverName} onChange={this.changeHandler}></input>
+          </div>
+          <div>
+            <label>Region: </label>
+            <select value={region} onChange={this.handleRegionChange}>
+              <option></option>
+              <option value="EU">EU</option>
+              <option value="NA">NA</option>
+            </select>
+          </div>
+          <button className="btn" type="submit">Create group</button>
+        </form>
+      </div>
     )
   }
 }
